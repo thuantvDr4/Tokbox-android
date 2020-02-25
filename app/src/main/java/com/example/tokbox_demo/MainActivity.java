@@ -26,13 +26,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements  Session.SessionListener, PublisherKit.PublisherListener {
 
-    private static String API_KEY ="46518622";
-    private static String SESSION_ID = "2_MX40NjUxODYyMn5-MTU4MjI2MDk1NDQxOH5Lc1hSWEFQeVp0VThkdlpHMGpXOENwNUV-fg";
+    private static String API_KEY ="46518622"; //46518622
+
+    private static String SESSION_ID = "2_MX40NjUxODYyMn5-MTU4MjYwMjcxNTQyNX5DU0ZIc0IvR2w2M200UFVuNzkxYUIrU0Z-fg";
     private static String TOKEN = "";
     private static String TOKEN_PUBLISHER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9NDIzM2Q4ODZhZTFhYjM1NjllZjdjMjNlNzYyYWViZGFjNDA0YzU5YjpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjY4ODc4Jm5vbmNlPTAuNjA5MDAwNjYzMDk5MDA2OCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTgyMjcyNDc2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
     private static String TOKEN_SUBSCRIBER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YzA4NzM4NTZlMWQ4OTg4YTBhNTcyNjE4Mjc5MTMyZDE2ZjkxMmFiZDpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjY4ODk1Jm5vbmNlPTAuNzcyMDY0MTMxNTMyMjM3JnJvbGU9c3Vic2NyaWJlciZleHBpcmVfdGltZT0xNTgyMjcyNDk0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
-    private static String TOKEN_MODERATOR_1 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9ZWFjM2E2ZTE0ZDQ2N2VkMTcyM2I5NGJkNGEzOGY1YTQ0YzA2NDk1OTpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjc0MjE3Jm5vbmNlPTAuNzczMjg4MzA4Mjc4OTYwMyZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyMzYwNjE2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
-    private static String TOKEN_MODERATOR_2 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9ZTVkMzRiNzVmNTM0MTg4MDZkNDliYzhmNWQwNWIyNjQ2NzU4NWVhMTpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjc0MjU2Jm5vbmNlPTAuMzU3MTcxOTkxMTU4Njk3OSZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyMzYwNjU1JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    private static String TOKEN_MODERATOR_1 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YWQzNWE3NmMzMDU0MWI0YTA0N2M2Y2Y1MjgyODZmODRiYmVkNmQwYjpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNall3TWpjeE5UUXlOWDVEVTBaSWMwSXZSMncyTTIwMFVGVnVOemt4WVVJclUwWi1mZyZjcmVhdGVfdGltZT0xNTgyNjAyNzQyJm5vbmNlPTAuMDM4ODgyNjIzMDc5MjkwOTEmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTU4MjY4OTE0MSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
+    private static String TOKEN_MODERATOR_2 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9NGI3MGYwNzUwYjc5OWRjMjZhMjk1MDRlOWM0MjY5Yjg0YWU1YjIzNzpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNall3TWpjeE5UUXlOWDVEVTBaSWMwSXZSMncyTTIwMFVGVnVOemt4WVVJclUwWi1mZyZjcmVhdGVfdGltZT0xNTgyNjAyNzUzJm5vbmNlPTAuODA5MTM4NzYwNzg5NTU5NyZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyNjg5MTUyJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
 
     private static final String LOG_TAG ="mlog: ";
     private static final int RC_SETTING_SCREEN_PERM = 123;
@@ -144,13 +145,17 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
     public void onConnected(Session session) {
         Log.d(LOG_TAG, "Session Connected");
 
-        mPublisher = new Publisher.Builder( this ).build();
+        mPublisher = new Publisher.Builder( this )
+                .frameRate(Publisher.CameraCaptureFrameRate.FPS_30)
+                .resolution(Publisher.CameraCaptureResolution.HIGH)
+                .build();
         mPublisher.setPublisherListener( this ); // need implement PublisherKit.PublisherListener
         mPublisherViewContainer.addView(mPublisher.getView());
 
         if( mPublisher.getView() instanceof GLSurfaceView ){
             ( (GLSurfaceView) mPublisher.getView()).setZOrderOnTop(true); ;
         }
+
 
         mSession.publish( mPublisher );
 
@@ -169,14 +174,16 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
     public void onStreamReceived(Session session, Stream stream) {
         Log.d(LOG_TAG, "Stream Received");
 
-//        if (mSubscriber == null) {
-//            mSubscriber = new Subscriber.Builder(this, stream).build();
-//            mSession.subscribe(mSubscriber);
-//            mSubscriberViewContainer.addView(mSubscriber.getView());
-//        }
-        mSubscriber = new Subscriber.Builder(this, stream).build();
-        mSession.subscribe(mSubscriber);
-        mSubscriberViewContainer.addView(mSubscriber.getView());
+        if (mSubscriber == null) {
+
+            mSubscriber = new Subscriber.Builder(this, stream).build();
+            mSession.subscribe(mSubscriber);
+            mSubscriberViewContainer.addView(mSubscriber.getView());
+        }
+//        mSubscriber = new Subscriber.Builder(this, stream).build();
+//        mSession.subscribe(mSubscriber);
+//        mSubscriberViewContainer.addView(mSubscriber.getView());
+
     }
 
     @Override
