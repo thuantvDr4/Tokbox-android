@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
 
     private static String API_KEY ="46518622"; //46518622
 
-    private static String SESSION_ID = "2_MX40NjUxODYyMn5-MTU4MjYwMjcxNTQyNX5DU0ZIc0IvR2w2M200UFVuNzkxYUIrU0Z-fg";
+    private static String SESSION_ID = "1_MX40NjUxODYyMn5-MTU4MjY4MjYzNzYwOH5iL3FveENONWw3S011VDZ4M01hNjI3V1N-fg";
     private static String TOKEN = "";
-    private static String TOKEN_PUBLISHER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9NDIzM2Q4ODZhZTFhYjM1NjllZjdjMjNlNzYyYWViZGFjNDA0YzU5YjpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjY4ODc4Jm5vbmNlPTAuNjA5MDAwNjYzMDk5MDA2OCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTgyMjcyNDc2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
-    private static String TOKEN_SUBSCRIBER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YzA4NzM4NTZlMWQ4OTg4YTBhNTcyNjE4Mjc5MTMyZDE2ZjkxMmFiZDpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNakkyTURrMU5EUXhPSDVMYzFoU1dFRlFlVnAwVlRoa2RscEhNR3BYT0VOd05VVi1mZyZjcmVhdGVfdGltZT0xNTgyMjY4ODk1Jm5vbmNlPTAuNzcyMDY0MTMxNTMyMjM3JnJvbGU9c3Vic2NyaWJlciZleHBpcmVfdGltZT0xNTgyMjcyNDk0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
-    private static String TOKEN_MODERATOR_1 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YWQzNWE3NmMzMDU0MWI0YTA0N2M2Y2Y1MjgyODZmODRiYmVkNmQwYjpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNall3TWpjeE5UUXlOWDVEVTBaSWMwSXZSMncyTTIwMFVGVnVOemt4WVVJclUwWi1mZyZjcmVhdGVfdGltZT0xNTgyNjAyNzQyJm5vbmNlPTAuMDM4ODgyNjIzMDc5MjkwOTEmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTU4MjY4OTE0MSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
-    private static String TOKEN_MODERATOR_2 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9NGI3MGYwNzUwYjc5OWRjMjZhMjk1MDRlOWM0MjY5Yjg0YWU1YjIzNzpzZXNzaW9uX2lkPTJfTVg0ME5qVXhPRFl5TW41LU1UVTRNall3TWpjeE5UUXlOWDVEVTBaSWMwSXZSMncyTTIwMFVGVnVOemt4WVVJclUwWi1mZyZjcmVhdGVfdGltZT0xNTgyNjAyNzUzJm5vbmNlPTAuODA5MTM4NzYwNzg5NTU5NyZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyNjg5MTUyJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    private static String TOKEN_PUBLISHER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9NzZlNjI1NWRmOGQzNmMwMmFkNDkzNjgxNmRjNjM1ZTE3YmQyYWYwMjpzZXNzaW9uX2lkPTFfTVg0ME5qVXhPRFl5TW41LU1UVTRNalk0TWpZek56WXdPSDVpTDNGdmVFTk9OV3czUzAxMVZEWjRNMDFoTmpJM1YxTi1mZyZjcmVhdGVfdGltZT0xNTgyNjgzNTQyJm5vbmNlPTAuMTkyNTU4OTc2MDY0NjUxNTUmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU4Mjc2OTk0MSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
+    private static String TOKEN_SUBSCRIBER = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YWU1Yzk5ODY1YjFiMmU3MDQ1NTNiZDBmZmQyZTc4ZWMzMmZiNmZjZTpzZXNzaW9uX2lkPTFfTVg0ME5qVXhPRFl5TW41LU1UVTRNalk0TWpZek56WXdPSDVpTDNGdmVFTk9OV3czUzAxMVZEWjRNMDFoTmpJM1YxTi1mZyZjcmVhdGVfdGltZT0xNTgyNjgzNTY4Jm5vbmNlPTAuMDY0NDc1NDc1Mjg3NDM5NDcmcm9sZT1zdWJzY3JpYmVyJmV4cGlyZV90aW1lPTE1ODI3Njk5NjcmaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=";
+    private static String TOKEN_MODERATOR_1 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9YzM2YWNlNDRlYzYxODIzZDk2YmE0YzEyZDE5ZjU2ZmFjZjJjNTFiYzpzZXNzaW9uX2lkPTFfTVg0ME5qVXhPRFl5TW41LU1UVTRNalk0TWpZek56WXdPSDVpTDNGdmVFTk9OV3czUzAxMVZEWjRNMDFoTmpJM1YxTi1mZyZjcmVhdGVfdGltZT0xNTgyNjgyNjgwJm5vbmNlPTAuNDY1NTc1ODU0Mzg0MDExNCZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyNzY5MDgwJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    private static String TOKEN_MODERATOR_2 = "T1==cGFydG5lcl9pZD00NjUxODYyMiZzaWc9MzMwOWM0OWE1MDhkODBjNDdjYzg4ZDQzYzQxZGFmMmY4ZWIwN2U1YjpzZXNzaW9uX2lkPTFfTVg0ME5qVXhPRFl5TW41LU1UVTRNalk0TWpZek56WXdPSDVpTDNGdmVFTk9OV3czUzAxMVZEWjRNMDFoTmpJM1YxTi1mZyZjcmVhdGVfdGltZT0xNTgyNjgyNzIzJm5vbmNlPTAuOTgxMzY1MDg3MTg5MjAyNiZyb2xlPW1vZGVyYXRvciZleHBpcmVfdGltZT0xNTgyNzY5MTIyJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
 
     private static final String LOG_TAG ="mlog: ";
     private static final int RC_SETTING_SCREEN_PERM = 123;
@@ -70,12 +70,12 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
         listen_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TOKEN = TOKEN_SUBSCRIBER;
+                String token = TOKEN_MODERATOR_2;
 
                 listen_btn.setVisibility(View.GONE);
                 call_to_btn.setVisibility(View.GONE);
 
-                requestPermission(TOKEN_MODERATOR_2);
+                requestPermission(token);
 
 //                Toast.makeText(MainActivity.this, "TOKEN_SUBSCRIBER", Toast.LENGTH_LONG).show();
             }
@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
         call_to_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TOKEN = TOKEN_PUBLISHER;
+                String token = TOKEN_MODERATOR_1;
 
                 listen_btn.setVisibility(View.GONE);
                 call_to_btn.setVisibility(View.GONE);
 
-                requestPermission(TOKEN_MODERATOR_1);
+                requestPermission(token);
 //                Toast.makeText(MainActivity.this, "TOKEN_PUBLISHER", Toast.LENGTH_LONG).show();
             }
         });
@@ -145,9 +145,10 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
     public void onConnected(Session session) {
         Log.d(LOG_TAG, "Session Connected");
 
+
         mPublisher = new Publisher.Builder( this )
-                .frameRate(Publisher.CameraCaptureFrameRate.FPS_30)
                 .resolution(Publisher.CameraCaptureResolution.HIGH)
+//                .frameRate(Publisher.CameraCaptureFrameRate.FPS_30)
                 .build();
         mPublisher.setPublisherListener( this ); // need implement PublisherKit.PublisherListener
         mPublisherViewContainer.addView(mPublisher.getView());
@@ -174,15 +175,15 @@ public class MainActivity extends AppCompatActivity implements  Session.SessionL
     public void onStreamReceived(Session session, Stream stream) {
         Log.d(LOG_TAG, "Stream Received");
 
-        if (mSubscriber == null) {
-
-            mSubscriber = new Subscriber.Builder(this, stream).build();
-            mSession.subscribe(mSubscriber);
-            mSubscriberViewContainer.addView(mSubscriber.getView());
-        }
-//        mSubscriber = new Subscriber.Builder(this, stream).build();
-//        mSession.subscribe(mSubscriber);
-//        mSubscriberViewContainer.addView(mSubscriber.getView());
+//        if (mSubscriber == null) {
+//
+//            mSubscriber = new Subscriber.Builder(this, stream).build();
+//            mSession.subscribe(mSubscriber);
+//            mSubscriberViewContainer.addView(mSubscriber.getView());
+//        }
+        mSubscriber = new Subscriber.Builder(this, stream).build();
+        mSession.subscribe(mSubscriber);
+        mSubscriberViewContainer.addView(mSubscriber.getView());
 
     }
 
